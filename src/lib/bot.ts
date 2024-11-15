@@ -46,6 +46,7 @@ export default class Bot {
       return this.#agent.post(text);
     }
   }
+  
 
   static async run(
     getPostText: () => Promise<string>,
@@ -62,4 +63,11 @@ export default class Bot {
     }
     return text;
   }
+
+  // static async runImg(
+  //   getPostImage: () => Promise<string>,
+  //   botOptions?: Partial<BotOptions>
+  //   ) {
+      
+  //   }
 }
