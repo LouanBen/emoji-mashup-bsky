@@ -23,7 +23,7 @@ await bot.login({
 });
 
 CronJob.from({
-  cronTime: "* * * * *",
+  cronTime: "0 * * * *",
   onTick: emojiMashup,
   start: true,
 });
