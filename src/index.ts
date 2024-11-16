@@ -2,7 +2,7 @@ import { Bot } from "@skyware/bot";
 import { generateEmoji } from "./canvas.js";
 import emojis from "./emoji-db.js";
 import bonus from "./bonus-db.js";
-import { CronJob } from "cron";
+// import { CronJob } from "cron";
 
 export interface EmojiBuiler {
   base: string;
@@ -28,7 +28,7 @@ await bot.login({
 //   start: true,
 // });
 
-emojiMashup();
+await emojiMashup();
 
 // eslint-disable-next-line sonarjs/cognitive-complexity
 async function emojiMashup() {
@@ -125,3 +125,5 @@ async function emojiMashup() {
     ],
   });
 }
+
+process.exit();
