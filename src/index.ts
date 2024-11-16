@@ -22,11 +22,13 @@ await bot.login({
   password: process.env.BSKY_PASSWORD as string,
 });
 
-CronJob.from({
-  cronTime: "0 * * * *",
-  onTick: emojiMashup,
-  start: true,
-});
+// CronJob.from({
+//   cronTime: "0 * * * *",
+//   onTick: emojiMashup,
+//   start: true,
+// });
+
+emojiMashup();
 
 // eslint-disable-next-line sonarjs/cognitive-complexity
 async function emojiMashup() {
