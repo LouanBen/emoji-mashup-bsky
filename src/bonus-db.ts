@@ -1,0 +1,25 @@
+export default [
+  //PACK #1 : Objects
+  { name: "sunglasses", char: "🕶️" },
+  { name: "glasses", char: "👓" },
+  { name: "goggles", char: "🥽" },
+  { name: "crown", char: "👑" },
+  { name: "hat", char: "🎩" },
+  { name: "ribbon", char: "🎀" },
+  { name: "cigarette", char: "🚬" },
+  { name: "umbrella", char: "☂️" },
+  { name: "candle", char: "🕯️" },
+  { name: "cup-with-straw", char: "🥤" },
+  { name: "popcorn", char: "🍿" },
+  //PACK #2 : Hands
+  { name: "waving-hand", char: "👋" },
+  { name: "vulcan-salute", char: "🖖" },
+  { name: "ok-hand", char: "👌" },
+  { name: "crossed-fingers", char: "🤞" },
+  { name: "call-me-hand", char: "🤙" },
+  { name: "fist-bump", char: "👊" },
+  { name: "thumbs-up", char: "👍" },
+  { name: "flexed-biceps", char: "💪" },
+  { name: "middle-finger", char: "🖕" },
+  { name: "victory-hand", char: "✌️" },
+];

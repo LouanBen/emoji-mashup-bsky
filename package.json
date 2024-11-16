@@ -1,7 +1,7 @@
 {
-  "name": "bsky-bot",
+  "name": "emoji-mashup-bsky",
   "version": "1.0.0",
-  "description": "A template repo for building Bluesky bots",
+  "description": "Emoji Mashup Bot for Bluesky",
   "main": "dist/index.js",
   "type": "module",
   "scripts": {
@@ -10,20 +10,20 @@
     "build": "tsc",
     "watch": "tsc --watch",
     "start": "node .",
-    "dev": "nodenv ."
+    "dev": "tsc && nodenv ."
   },
   "keywords": [
     "bsky",
     "bluesky",
     "atproto",
-    "bot"
+    "bot",
+    "emoji mashup"
   ],
   "author": {
-    "name": "Phil Nash",
-    "email": "philnash@gmail.com",
-    "url": "https://philna.sh/"
+    "name": "Louan Bengmah",
+    "email": "louanben.pro@gmail.com",
+    "url": "https://louan.me"
   },
-  "license": "MIT",
   "devDependencies": {
     "@types/node": "^18.16.2",
     "@typescript-eslint/eslint-plugin": "^5.59.1",
