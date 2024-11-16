@@ -113,3 +113,5 @@ await bot.post({
     },
   ],
 });
+
+process.exit();
