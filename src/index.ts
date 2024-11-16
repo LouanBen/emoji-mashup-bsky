@@ -17,7 +17,7 @@ export interface Bonus {
 
 const bot = new Bot();
 await bot.login({
-  identifier: process.env.BSKY_USERNAME as string,
+  identifier: process.env.BSKY_HANDLE as string,
   password: process.env.BSKY_PASSWORD as string,
 });
 
