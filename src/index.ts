@@ -25,7 +25,7 @@ await bot.login({
 const log = (str: string) => console.log(new Date().toJSON(), str);
 
 CronJob.from({
-  cronTime: "* * * * *",
+  cronTime: "0 * * * *",
   onTick: emojiMashup,
   start: true,
 });
