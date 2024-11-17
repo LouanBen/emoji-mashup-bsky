@@ -2,7 +2,7 @@ import { Bot } from "@skyware/bot";
 import { generateEmoji } from "./canvas.js";
 import emojis from "./emoji-db.js";
 import bonus from "./bonus-db.js";
-// import { CronJob } from "cron";
+import { CronJob } from "cron";
 
 export interface EmojiBuiler {
   base: string;
@@ -22,13 +22,15 @@ await bot.login({
   password: process.env.BSKY_PASSWORD as string,
 });
 
-// CronJob.from({
-//   cronTime: "0 * * * *",
-//   onTick: emojiMashup,
-//   start: true,
-// });
+const log = (str: string) => console.log(new Date().toJSON(), str);
 
-await emojiMashup();
+CronJob.from({
+  cronTime: "* * * * *",
+  onTick: emojiMashup,
+  start: true,
+});
+
+// await emojiMashup();
 
 // eslint-disable-next-line sonarjs/cognitive-complexity
 async function emojiMashup() {
@@ -106,11 +108,11 @@ async function emojiMashup() {
     rotation = "upside-down";
   }
 
-  console.log("generating image");
+  log("generating image");
   // Generate image
   const imgUrl = await generateEmoji(result, selectedBonus, rotation);
 
-  console.log("posting emoji");
+  log("posting emoji");
   await bot.post({
     text: `${emoji1.char} ${emoji1.name} + ${emoji2.char} ${emoji2.name} ${
       selectedBonus ? `+ ${selectedBonus.char} ${selectedBonus.name}` : ""
@@ -126,4 +128,4 @@ async function emojiMashup() {
   });
 }
 
-process.exit();
+// process.exit();

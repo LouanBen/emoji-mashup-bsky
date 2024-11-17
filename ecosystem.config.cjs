@@ -20,14 +20,14 @@ module.exports = {
   ],
   deploy: {
     production: {
-      user: "root",
-      host: ["185.216.27.60"],
+      user: process.env.DEPLOY_USER,
+      host: [process.env.DEPLOY_HOST],
       ref: "origin/main",
       repo: "https://github.com/LouanBen/emoji-mashup-bsky.git",
       path: "/var/bots/emoji-mashup-bsky",
-      "post-deploy": "npm install && npm run build",
-      key: "/home/louan/priv-key",
+      "post-deploy":
+        "npm install && npm run build && pm2 startOrRestart ecosystem.config.cjs --env production",
+      key: process.env.DEPLOY_SSH_KEY_PATH,
     },
-    // && pm2 startOrRestart
   },
 };
