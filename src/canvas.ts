@@ -58,11 +58,11 @@ export async function generateEmoji(
 
   if (rotation === "upside-down") {
     ctx.translate(canvas.width / 2, canvas.height / 2);
-    ctx.rotate(-Math.PI / 4);
+    ctx.rotate(Math.PI);
     ctx.translate(-(canvas.width / 2), -(canvas.height / 2));
   } else if (rotation === "ROFL") {
     ctx.translate(canvas.width / 2, canvas.height / 2);
-    ctx.rotate(Math.PI);
+    ctx.rotate(-Math.PI / 4);
     ctx.translate(-(canvas.width / 2), -(canvas.height / 2));
   }
 
