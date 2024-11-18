@@ -25,7 +25,7 @@ await bot.login({
 const log = (str: string) => console.log(new Date().toJSON(), str);
 
 CronJob.from({
-  cronTime: "0 * * * *",
+  cronTime: "0 */2 * * *", // Every two hours
   onTick: emojiMashup,
   start: true,
 });
