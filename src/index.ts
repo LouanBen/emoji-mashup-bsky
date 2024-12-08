@@ -123,6 +123,10 @@ async function emojiMashup() {
         alt: `An Emoji Mashup combining ${emoji1.char} and ${emoji2.char}. ${
           selectedBonus ? `There's also a ${selectedBonus.char}` : ""
         }`,
+        aspectRatio: {
+          width: 1024,
+          height: 512,
+        },
       },
     ],
   });
